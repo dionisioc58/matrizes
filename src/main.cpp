@@ -1,6 +1,7 @@
 #include <iostream>
 using std::cout;
 using std::cerr;
+using std::cin;
 using std::endl;
 
 #include "matriz.h"
@@ -18,17 +19,18 @@ int main(int argc, char* argv[]) {
     
     //Calcula a multiplicação utilizando iteração
     int **mint3 = multiplicaI(mint1, mint2, dimensao);
-    //multiplicaI(mint1, mint2, dimensao);
-
+    
     //Calcula a multiplicação utilizando recursão
-    //int *matriz4 = multiplicaMatrizesR(matriz1, (linhas * colunas), matriz2, (linhas * colunas));
+    int **mint4 = multiplicaR(mint1, mint2, dimensao);
 
     //Imprime
     cout << mint3[0][0] << endl;
+    cout << mint4[0][0] << endl;
 
     delete[] mint1;
     delete[] mint2;
-    //delete[] mint3;
+    delete[] mint4;
+    delete[] mint3;
 
     return 0;
 }

@@ -24,24 +24,19 @@ CFLAGS = -Wall -pedantic -ansi -std=c++11 -I $(INC_DIR)
 
 # Define o alvo (target) para a compilacao completa.
 # Ao final da compilacao, remove os arquivos objeto.
-all: matrizes doxy
+all: clean matrizes doxy
 debug: CFLAGS += -g #-O0
 debug: matrizes
 
 # Alvo (target) para a construcao do executavel matrizes
-# Define os arquivos matriz.o, funcoes.o, menu.o e main.o como dependencias
-matrizes: $(OBJ_DIR)/matriz.o $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/main.o
+# Define os arquivos funcoes.o, menu.o e main.o como dependencias
+matrizes: $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/main.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
 	@echo "+++ [Executavel $@ criado em $(BIN_DIR)] +++"
 	@echo "============="
-
-# Alvo (target) para a construcao do objeto matriz.o
-# Define os arquivos matriz.cpp e matriz.h como dependencias.
-$(OBJ_DIR)/matriz.o: $(SRC_DIR)/matriz.cpp $(INC_DIR)/matriz.h
-	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto menu.o
 # Define os arquivos menu.cpp e menu.h como dependencias.
@@ -55,7 +50,7 @@ $(OBJ_DIR)/funcoes.o: $(SRC_DIR)/funcoes.cpp $(INC_DIR)/funcoes.h
 
 # Alvo (target) para a construcao do objeto main.o
 # Define o arquivo main.cpp como dependencias.
-$(OBJ_DIR)/main.o: $(SRC_DIR)/main.cpp
+$(OBJ_DIR)/main.o: $(SRC_DIR)/main.cpp $(INC_DIR)/matriz.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a geração automatica de documentacao usando o Doxygen.

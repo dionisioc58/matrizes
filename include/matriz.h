@@ -17,7 +17,7 @@
     * @param n Dimensao das matrizes de entrada
     * @return Matriz produto resultante da multiplicacao
     */
-    template <typename T>
+    template<typename T>
     T **multiplicaI(T **A, T **B, int n) {
         return A;
     }
@@ -30,6 +30,8 @@
     * @return Matriz produto resultante da multiplicacao
     */
     template <typename T>
-    T **multiplicaR(T **A, T **B, int n);
+    T **multiplicaR(T **A, T **B, int n) {
+        return A;
+    }
 
 #endif

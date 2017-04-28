@@ -91,19 +91,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef MATRIZ_H</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #define MATRIZ_H</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    T** <a class="code" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a>(T** A, T** B, <span class="keywordtype">int</span> n);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    T** <a class="code" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a>(T** A, T** B, <span class="keywordtype">int</span> n);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="matriz_8h_html_a4ffe92faa374c4cdf326cff58aec5f74"><div class="ttname"><a href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a></div><div class="ttdeci">T ** multiplicaR(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva. </div><div class="ttdef"><b>Definition:</b> matriz.cpp:32</div></div>
-<div class="ttc" id="matriz_8h_html_a754e5789550bcfb586ea90f2051e0b5d"><div class="ttname"><a href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a></div><div class="ttdeci">T ** multiplicaI(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa. </div><div class="ttdef"><b>Definition:</b> matriz.cpp:20</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">   21</a></span>&#160;    T **<a class="code" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a>(T **A, T **B, <span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> A;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">   33</a></span>&#160;    T **<a class="code" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a>(T **A, T **B, <span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> A;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="matriz_8h_html_a4ffe92faa374c4cdf326cff58aec5f74"><div class="ttname"><a href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a></div><div class="ttdeci">T ** multiplicaR(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva. </div><div class="ttdef"><b>Definition:</b> matriz.h:33</div></div>
+<div class="ttc" id="matriz_8h_html_a754e5789550bcfb586ea90f2051e0b5d"><div class="ttname"><a href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a></div><div class="ttdeci">T ** multiplicaI(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa. </div><div class="ttdef"><b>Definition:</b> matriz.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 28 de Abril de 2017 16:17:51 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 28 de Abril de 2017 17:07:41 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
