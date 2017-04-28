@@ -1,0 +1,28 @@
+# Doxyfile 1.8.11
+# Arquivo de configuracao com opcoes para geracao de documentacao
+# automatica com o Doxygen (www.doxygen.org)
+
+# Nome do projeto
+PROJECT_NAME		= "Laboratorio 5"
+
+# Descricao do projeto
+PROJECT_BRIEF		= "Laboratório 5 de Linguagem de Programação I"
+
+# Endereco do diretorio no qual sera armazenada a documentacao gerada
+OUTPUT_DIRECTORY 	=
+
+# Idioma no qual a documentacao sera gerada
+OUTPUT_LANGUAGE 	= Brazilian
+
+# Determina se subdiretorios deverão ser pesquisados por arquivos de codigo fonte
+RECURSIVE 			= YES
+
+# Determina se devera ser gerada documentacao em formato de paginas Web (HTML)
+GENERATE_HTML 		= YES
+
+# Diretorio no qual devera ser armazenada a documentacao em formato de paginas Web (HTML)
+HTML_OUTPUT 		= doc
+
+# Determina se devera ser gerada documentacao em formato LaTeX
+GENERATE_LATEX 		= NO
+
