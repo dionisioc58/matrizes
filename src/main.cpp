@@ -38,15 +38,16 @@ int main(int argc, char* argv[]) {
     ss >> nome2;
     int **matriz1 = loadMatriz<int>(nome1, dimensao);
     int **matriz2 = loadMatriz<int>(nome2,  dimensao);
-    
-    if((matriz1 != NULL) || (matriz2 != NULL)) {
+
+    if((matriz1 == NULL) || (matriz2 == NULL)) {
         delete[] matriz1;
         delete[] matriz2;
         return 2;
     }
+    cout << endl;
 
     //Calcula a multiplicação utilizando iteração
-    //int **mint3 = multiplicaI(mint1, mint2, dimensao);
+    int **c = multiplicaI(matriz1, matriz2, dimensao);
     
     //Calcula a multiplicação utilizando recursão
     //int **mint4 = multiplicaR(mint1, mint2, dimensao);
@@ -54,7 +55,7 @@ int main(int argc, char* argv[]) {
     //Imprime
     for(int i = 0; i < dimensao; i++) {
         for(int j = 0; j < dimensao; j++)
-            cout << matriz1[i][j] << " ";
+            cout << c[i][j] << " ";
         cout << endl;
     }
 
