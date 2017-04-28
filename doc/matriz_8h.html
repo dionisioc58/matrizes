@@ -92,7 +92,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 
 <p>Arquivo de cabeçalho com a definição das funções.  
 <a href="#details">Mais...</a></p>
-
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para matriz.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="matriz_8h__incl.png" border="0" usemap="#include_2matriz_8h" alt=""/></div>
+<map name="include_2matriz_8h" id="include_2matriz_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="matriz_8h__dep__incl.png" border="0" usemap="#include_2matriz_8hdep" alt=""/></div>
+<map name="include_2matriz_8hdep" id="include_2matriz_8hdep">
+<area shape="rect" id="node2" href="main_8cpp.html" title="Arquivo fonte para execução do projeto. " alt="" coords="14,80,111,107"/></map>
+</div>
+</div>
 <p><a href="matriz_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -105,6 +122,10 @@ Funções</h2></td></tr>
 <tr class="memitem:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a> (T **A, T **B, int n)</td></tr>
 <tr class="memdesc:a4ffe92faa374c4cdf326cff58aec5f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva.  <a href="#a4ffe92faa374c4cdf326cff58aec5f74">Mais...</a><br /></td></tr>
 <tr class="separator:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80b3231077edc67e2b022e550b78e71"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac80b3231077edc67e2b022e550b78e71"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">loadMatriz</a> (string nome, int &amp;dim=0)</td></tr>
+<tr class="memdesc:ac80b3231077edc67e2b022e550b78e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que carrega um arquivo de dados contendo uma matriz quadrada.  <a href="#ac80b3231077edc67e2b022e550b78e71">Mais...</a><br /></td></tr>
+<tr class="separator:ac80b3231077edc67e2b022e550b78e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Arquivo de cabeçalho com a definição das funções. </p>
@@ -114,6 +135,44 @@ Airton Neto (<a href="#" onclick="location.href='mai'+'lto:'+'net'+'oa'+'irt'+'o
 <dl class="section since"><dt>Desde</dt><dd>28/04/2017 </dd></dl>
 <dl class="section date"><dt>Data</dt><dd>28/04/2017 </dd></dl>
 </div><h2 class="groupheader">Funções</h2>
+<a class="anchor" id="ac80b3231077edc67e2b022e550b78e71"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T** loadMatriz </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>dim</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que carrega um arquivo de dados contendo uma matriz quadrada. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nome</td><td>String com o caminho/nome do arquivo à ler </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dim</td><td>Dimensão da matriz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a matriz lida </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a754e5789550bcfb586ea90f2051e0b5d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +266,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 28 de Abril de 2017 17:07:41 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 28 de Abril de 2017 20:21:45 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/matrizes",
-            "args": [],
+            "args": ["./data/A2x2.txt"],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
