@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Laboratorio 5: Código-Fonte de include/matriz.h</title>
+<title>Multiplicação de Matrizes: Código-Fonte de include/matriz.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,9 +22,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Laboratorio 5
+   <div id="projectname">Multiplicação de Matrizes
    </div>
-   <div id="projectbrief">Laboratório 5 de Linguagem de Programação I</div>
+   <div id="projectbrief">Programa para cálculo de multiplicação de matrizes</div>
   </td>
  </tr>
  </tbody>
@@ -87,18 +87,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">matriz.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MATRIZ_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">    #define MATRIZ_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keywordtype">int</span> *multiplicaMatrizesI(<span class="keywordtype">int</span> *m1, <span class="keywordtype">int</span> qtde1, <span class="keywordtype">int</span> *m2, <span class="keywordtype">int</span> qtde2);</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">int</span> *multiplicaMatrizesR(<span class="keywordtype">int</span> *m1, <span class="keywordtype">int</span> qtde1, <span class="keywordtype">int</span> *m2, <span class="keywordtype">int</span> qtde2);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif // !FUNCIONARIO_H</span></div>
+<a href="matriz_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef MATRIZ_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #define MATRIZ_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    T** <a class="code" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a>(T** A, T** B, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    T** <a class="code" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a>(T** A, T** B, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="matriz_8h_html_a4ffe92faa374c4cdf326cff58aec5f74"><div class="ttname"><a href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a></div><div class="ttdeci">T ** multiplicaR(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva. </div><div class="ttdef"><b>Definition:</b> matriz.cpp:32</div></div>
+<div class="ttc" id="matriz_8h_html_a754e5789550bcfb586ea90f2051e0b5d"><div class="ttname"><a href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a></div><div class="ttdeci">T ** multiplicaI(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa. </div><div class="ttdef"><b>Definition:</b> matriz.cpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 28 de Abril de 2017 12:41:57 para Laboratorio 5 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 28 de Abril de 2017 16:17:51 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Multiplicação de Matrizes: Referência do Arquivo src/funcoes.cpp</title>
+<title>Multiplicação de Matrizes: Referência do Arquivo include/matriz.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,58 +79,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Funções</a>  </div>
   <div class="headertitle">
-<div class="title">Referência do Arquivo funcoes.cpp</div>  </div>
+<div class="title">Referência do Arquivo matriz.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Arquivo de corpo com a definição de funções auxiliares para a entrada de dados.  
+<p>Arquivo de cabeçalho com a definição das funções.  
 <a href="#details">Mais...</a></p>
-<div class="textblock"><code>#include &quot;funcoes.h&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Gráfico de dependência de inclusões para funcoes.cpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="funcoes_8cpp__incl.png" border="0" usemap="#src_2funcoes_8cpp" alt=""/></div>
-<map name="src_2funcoes_8cpp" id="src_2funcoes_8cpp">
-<area shape="rect" id="node2" href="funcoes_8h_source.html" title="funcoes.h" alt="" coords="46,80,125,107"/></map>
-</div>
-</div><table class="memberdecls">
+
+<p><a href="matriz_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:ad50ffdcfecc6907b77dfd91f5bdb8955"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8cpp.html#ad50ffdcfecc6907b77dfd91f5bdb8955">recebeFloat</a> (string msg, int min)</td></tr>
-<tr class="memdesc:ad50ffdcfecc6907b77dfd91f5bdb8955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que coleta um valor float maior que zero pela entrada validando-o.  <a href="#ad50ffdcfecc6907b77dfd91f5bdb8955">Mais...</a><br /></td></tr>
-<tr class="separator:ad50ffdcfecc6907b77dfd91f5bdb8955"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2086a7c3272ac3b2a64478893d4b790e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8cpp.html#a2086a7c3272ac3b2a64478893d4b790e">recebeInt</a> (string msg, int min)</td></tr>
-<tr class="memdesc:a2086a7c3272ac3b2a64478893d4b790e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que coleta um valor inteiro maior ou igual à zero pela entrada validando-o.  <a href="#a2086a7c3272ac3b2a64478893d4b790e">Mais...</a><br /></td></tr>
-<tr class="separator:a2086a7c3272ac3b2a64478893d4b790e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a754e5789550bcfb586ea90f2051e0b5d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a754e5789550bcfb586ea90f2051e0b5d"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a> (T **A, T **B, int n)</td></tr>
+<tr class="memdesc:a754e5789550bcfb586ea90f2051e0b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa.  <a href="#a754e5789550bcfb586ea90f2051e0b5d">Mais...</a><br /></td></tr>
+<tr class="separator:a754e5789550bcfb586ea90f2051e0b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a> (T **A, T **B, int n)</td></tr>
+<tr class="memdesc:a4ffe92faa374c4cdf326cff58aec5f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva.  <a href="#a4ffe92faa374c4cdf326cff58aec5f74">Mais...</a><br /></td></tr>
+<tr class="separator:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
-<div class="textblock"><p>Arquivo de corpo com a definição de funções auxiliares para a entrada de dados. </p>
-<dl class="section author"><dt>Autor</dt><dd>Dionísio Carvalho (<a href="#" onclick="location.href='mai'+'lto:'+'dio'+'ni'+'sio'+'@n'+'ara'+'co'+'sta'+'.c'+'om.'+'br'; return false;">dioni<span style="display: none;">.nosp@m.</span>sio@<span style="display: none;">.nosp@m.</span>narac<span style="display: none;">.nosp@m.</span>osta<span style="display: none;">.nosp@m.</span>.com.<span style="display: none;">.nosp@m.</span>br</a>) </dd></dl>
-<dl class="section since"><dt>Desde</dt><dd>11/03/2017 </dd></dl>
-<dl class="section date"><dt>Data</dt><dd>02/04/2017 </dd></dl>
+<div class="textblock"><p>Arquivo de cabeçalho com a definição das funções. </p>
+<p>Arquivo de corpo com a definição das funções.</p>
+<dl class="section author"><dt>Autor</dt><dd>Dionísio Carvalho (<a href="#" onclick="location.href='mai'+'lto:'+'dio'+'ni'+'sio'+'@n'+'ara'+'co'+'sta'+'.c'+'om.'+'br'; return false;">dioni<span style="display: none;">.nosp@m.</span>sio@<span style="display: none;">.nosp@m.</span>narac<span style="display: none;">.nosp@m.</span>osta<span style="display: none;">.nosp@m.</span>.com.<span style="display: none;">.nosp@m.</span>br</a>) </dd>
+<dd>
+Airton Neto (netoairton) </dd></dl>
+<dl class="section since"><dt>Desde</dt><dd>28/04/2017 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>28/04/2017 </dd></dl>
 </div><h2 class="groupheader">Funções</h2>
-<a class="anchor" id="ad50ffdcfecc6907b77dfd91f5bdb8955"></a>
+<a class="anchor" id="a754e5789550bcfb586ea90f2051e0b5d"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">float recebeFloat </td>
+          <td class="memname">T** multiplicaI </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>min</em>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -140,35 +147,42 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função que coleta um valor float maior que zero pela entrada validando-o. </p>
+<p>Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>String com a mensagem à exibir </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>Int com o valor mínimo aceitável </td></tr>
+    <tr><td class="paramname">A</td><td>Matriz de entrada </td></tr>
+    <tr><td class="paramname">B</td><td>Matriz de entrada </td></tr>
+    <tr><td class="paramname">n</td><td>Dimensao das matrizes de entrada </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>Float capturado </dd></dl>
-<p>&lt; limpar o bit de falha do cin</p>
-<p>&lt; receber todos dados digitados até o fim da linha para esvaziar </p>
+<dl class="section return"><dt>Retorna</dt><dd>Matriz produto resultante da multiplicacao </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a2086a7c3272ac3b2a64478893d4b790e"></a>
+<a class="anchor" id="a4ffe92faa374c4cdf326cff58aec5f74"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int recebeInt </td>
+          <td class="memname">T** multiplicaR </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>min</em>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -178,17 +192,16 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função que coleta um valor inteiro maior ou igual à zero pela entrada validando-o. </p>
+<p>Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>String com a mensagem à exibir </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>Int com o valor mínimo aceitável </td></tr>
+    <tr><td class="paramname">A</td><td>Matriz de entrada </td></tr>
+    <tr><td class="paramname">B</td><td>Matriz de entrada </td></tr>
+    <tr><td class="paramname">n</td><td>Dimensao das matrizes de entrada </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>Int capturado </dd></dl>
-<p>&lt; impar o bit de falha do cin</p>
-<p>&lt; receber todos dados digitados até o fim da linha para esvaziar </p>
+<dl class="section return"><dt>Retorna</dt><dd>Matriz produto resultante da multiplicacao </dd></dl>
 
 </div>
 </div>

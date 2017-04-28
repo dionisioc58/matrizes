@@ -3,10 +3,10 @@
 # automatica com o Doxygen (www.doxygen.org)
 
 # Nome do projeto
-PROJECT_NAME		= "Laboratorio 5"
+PROJECT_NAME		= "Multiplicação de Matrizes"
 
 # Descricao do projeto
-PROJECT_BRIEF		= "Laboratório 5 de Linguagem de Programação I"
+PROJECT_BRIEF		= "Programa para cálculo de multiplicação de matrizes"
 
 # Endereco do diretorio no qual sera armazenada a documentacao gerada
 OUTPUT_DIRECTORY 	=
