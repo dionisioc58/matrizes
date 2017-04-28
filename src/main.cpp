@@ -24,45 +24,62 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    //Testa arquivo do argumento
-    cout<< "Abrindo arquivo... ";
-    string msg = "";
+    int **matriz1;
+    int **matriz2;
+    int **matrizci;
+    int **matrizcr;
     int dimensao = 0;
-    
-    //Prepara nomes das matrizes A e B
     stringstream ss;
-    string nome1, nome2;
-    ss << "./data/A" << argv[1] << "x" << argv[1] << ".txt";
-    ss >> nome1;
-    ss.clear();
-    ss << "./data/B" << argv[1] << "x" << argv[1] << ".txt";
-    ss >> nome2;
-    //Carrega as matrizes A e B
-    int **matriz1 = loadMatriz<int>(nome1, dimensao);
-    int **matriz2 = loadMatriz<int>(nome2,  dimensao);
+        
+    for(int a = 1; a < argc; a++) {
+        //Prepara nomes das matrizes A e B
+        string nome1, nome2;
 
-    cout << endl;
-    //Se não carregou, sair
-    if((matriz1 == NULL) || (matriz2 == NULL)) {
-        delete[] matriz1;
-        delete[] matriz2;
-        return 2;
-    }
-    
-    //Calcula a multiplicação utilizando iteração
-    int **c = multiplicaI(matriz1, matriz2, dimensao);
-    
-    //Calcula a multiplicação utilizando recursão
-    //int **mint4 = multiplicaR(mint1, mint2, dimensao);
+        ss.clear();
+        ss << "./data/A" << argv[a] << "x" << argv[a] << ".txt";
+        ss >> nome1;
+        
+        ss.clear();
+        ss << "./data/B" << argv[a] << "x" << argv[a] << ".txt";
+        ss >> nome2;
+        
+        //Carrega as matrizes A e B
+        cout<< "Abrindo arquivo... " << nome1 << endl;
+        matriz1 = loadMatriz<int>(nome1, dimensao);
+        cout<< "Abrindo arquivo... " << nome2 << endl;
+        matriz2 = loadMatriz<int>(nome2,  dimensao);
+        
+        //Se não carregou, sair
+        if((matriz1 == NULL) || (matriz2 == NULL)) {
+            delete[] matriz1;
+            delete[] matriz2;
+            return 2;
+        }
+        
+        //Calcula a multiplicação utilizando iteração
+        matrizci = multiplicaI(matriz1, matriz2, dimensao);
+        //Calcula a multiplicação utilizando recursão
+        matrizcr = multiplicaR(matriz1, matriz2, dimensao);
 
-    //Imprime
-    for(int i = 0; i < dimensao; i++) {
-        for(int j = 0; j < dimensao; j++)
-            cout << c[i][j] << " ";
-        cout << endl;
+        //Imprime I
+        for(int i = 0; i < dimensao; i++) {
+            for(int j = 0; j < dimensao; j++)
+                cout << matrizci[i][j] << " ";
+            cout << endl;
+        }
+
+        //Imprime R
+        for(int i = 0; i < dimensao; i++) {
+            for(int j = 0; j < dimensao; j++)
+                cout << matrizcr[i][j] << " ";
+            cout << endl;
+        }
     }
 
     delete[] matriz1;
+    delete[] matriz2;
+    delete[] matrizci;
+    delete[] matrizcr;
 
     return 0;
 }

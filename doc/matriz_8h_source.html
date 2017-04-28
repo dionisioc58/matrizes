@@ -105,74 +105,80 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">   33</a></span>&#160;    T **<a class="code" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a>(T **A, T **B, <span class="keywordtype">int</span> n) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> A;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">   45</a></span>&#160;    T **<a class="code" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a>(T **A, T **B, <span class="keywordtype">int</span> n) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> A;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">   56</a></span>&#160;    T **<a class="code" href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">loadMatriz</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">int</span> &amp;dim = 0) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//Abrir o arquivo</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ifstream entrada(nome);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span>(!entrada) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Falha de arquivo&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">int</span> colunas;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">string</span> lido = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        stringstream sa;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//Lê a primeira linha</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        entrada.clear();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        entrada.seekg(0);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        getline(entrada, lido, <span class="charliteral">&#39; &#39;</span>); <span class="comment">//Primeira parte</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        sa.clear();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        sa &lt;&lt; lido;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        sa &gt;&gt; dim;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        getline(entrada, lido);<span class="comment">//Parte final da linha</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        sa.clear();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        sa &lt;&lt; lido;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        sa &gt;&gt; colunas;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span>(dim != colunas) {        <span class="comment">//Se valores são diferentes não aceita</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Só aceita matrizes quadradas&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">int</span> **M = <span class="keyword">new</span> <span class="keywordtype">int</span>*[dim];</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dim; i++) {              <span class="comment">//Lê o arquivo até o final</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            M[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[dim];                    <span class="comment">//Cria as colunas da linha atual</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; dim; j++) {          <span class="comment">//Lê todas as colunas da linha atual</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">if</span>(j == (dim - 1))                  </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    getline(entrada, lido);         <span class="comment">//Se última coluna, a leitura é diferente</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    getline(entrada, lido, <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="comment">//Converte string para o tipo T</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                sa.clear();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                sa &lt;&lt; lido;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                sa &gt;&gt; M[i][j];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">//Encerra a função devolvendo as informações</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        entrada.close();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> M;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="matriz_8h_html_a4ffe92faa374c4cdf326cff58aec5f74"><div class="ttname"><a href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a></div><div class="ttdeci">T ** multiplicaR(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva. </div><div class="ttdef"><b>Definition:</b> matriz.h:45</div></div>
-<div class="ttc" id="matriz_8h_html_ac80b3231077edc67e2b022e550b78e71"><div class="ttname"><a href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">loadMatriz</a></div><div class="ttdeci">T ** loadMatriz(string nome, int &amp;dim=0)</div><div class="ttdoc">Função que carrega um arquivo de dados contendo uma matriz quadrada. </div><div class="ttdef"><b>Definition:</b> matriz.h:56</div></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">int</span> **ret = <span class="keyword">new</span> <span class="keywordtype">int</span>*[n];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            ret[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[n];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">   51</a></span>&#160;    T **<a class="code" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a>(T **A, T **B, <span class="keywordtype">int</span> n) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> A;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">   62</a></span>&#160;    T **<a class="code" href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">loadMatriz</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">int</span> &amp;dim = 0) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//Abrir o arquivo</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        ifstream entrada(nome);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span>(!entrada) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Falha de arquivo&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">int</span> colunas;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">string</span> lido = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        stringstream sa;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//Lê a primeira linha</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        entrada.clear();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        entrada.seekg(0);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        getline(entrada, lido, <span class="charliteral">&#39; &#39;</span>); <span class="comment">//Primeira parte</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        sa.clear();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        sa &lt;&lt; lido;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        sa &gt;&gt; dim;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        getline(entrada, lido);<span class="comment">//Parte final da linha</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        sa.clear();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        sa &lt;&lt; lido;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        sa &gt;&gt; colunas;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">if</span>(dim != colunas) {        <span class="comment">//Se valores são diferentes não aceita</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Só aceita matrizes quadradas&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">int</span> **M = <span class="keyword">new</span> <span class="keywordtype">int</span>*[dim];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; dim; i++) {              <span class="comment">//Lê o arquivo até o final</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            M[i] = <span class="keyword">new</span> <span class="keywordtype">int</span>[dim];                    <span class="comment">//Cria as colunas da linha atual</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; dim; j++) {          <span class="comment">//Lê todas as colunas da linha atual</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">if</span>(j == (dim - 1))                  </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    getline(entrada, lido);         <span class="comment">//Se última coluna, a leitura é diferente</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    getline(entrada, lido, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="comment">//Converte string para o tipo T</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                sa.clear();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                sa &lt;&lt; lido;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                sa &gt;&gt; M[i][j];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">//Encerra a função devolvendo as informações</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        entrada.close();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> M;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="matriz_8h_html_a4ffe92faa374c4cdf326cff58aec5f74"><div class="ttname"><a href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a></div><div class="ttdeci">T ** multiplicaR(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva. </div><div class="ttdef"><b>Definition:</b> matriz.h:51</div></div>
+<div class="ttc" id="matriz_8h_html_ac80b3231077edc67e2b022e550b78e71"><div class="ttname"><a href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">loadMatriz</a></div><div class="ttdeci">T ** loadMatriz(string nome, int &amp;dim=0)</div><div class="ttdoc">Função que carrega um arquivo de dados contendo uma matriz quadrada. </div><div class="ttdef"><b>Definition:</b> matriz.h:62</div></div>
 <div class="ttc" id="matriz_8h_html_a754e5789550bcfb586ea90f2051e0b5d"><div class="ttname"><a href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a></div><div class="ttdeci">T ** multiplicaI(T **A, T **B, int n)</div><div class="ttdoc">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa. </div><div class="ttdef"><b>Definition:</b> matriz.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 28 de Abril de 2017 20:30:53 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 28 de Abril de 2017 20:56:48 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

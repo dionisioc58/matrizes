@@ -29,24 +29,14 @@ debug: CFLAGS += -g #-O0
 debug: matrizes
 
 # Alvo (target) para a construcao do executavel matrizes
-# Define os arquivos funcoes.o, menu.o e main.o como dependencias
-matrizes: $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/main.o
+# Define os arquivos main.o como dependencias
+matrizes: $(OBJ_DIR)/main.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
 	@echo "+++ [Executavel $@ criado em $(BIN_DIR)] +++"
 	@echo "============="
-
-# Alvo (target) para a construcao do objeto menu.o
-# Define os arquivos menu.cpp e menu.h como dependencias.
-$(OBJ_DIR)/menu.o: $(SRC_DIR)/menu.cpp $(INC_DIR)/menu.h
-	$(CC) -c $(CFLAGS) -o $@ $<
-
-# Alvo (target) para a construcao do objeto funcoes.o
-# Define os arquivos funcoes.cpp e funcoes.h como dependencias.
-$(OBJ_DIR)/funcoes.o: $(SRC_DIR)/funcoes.cpp $(INC_DIR)/funcoes.h
-	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto main.o
 # Define o arquivo main.cpp como dependencias.
