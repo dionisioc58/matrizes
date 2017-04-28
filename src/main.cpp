@@ -29,6 +29,7 @@ int main(int argc, char* argv[]) {
     string msg = "";
     int dimensao = 0;
     
+    //Prepara nomes das matrizes A e B
     stringstream ss;
     string nome1, nome2;
     ss << "./data/A" << argv[1] << "x" << argv[1] << ".txt";
@@ -36,16 +37,18 @@ int main(int argc, char* argv[]) {
     ss.clear();
     ss << "./data/B" << argv[1] << "x" << argv[1] << ".txt";
     ss >> nome2;
+    //Carrega as matrizes A e B
     int **matriz1 = loadMatriz<int>(nome1, dimensao);
     int **matriz2 = loadMatriz<int>(nome2,  dimensao);
 
+    cout << endl;
+    //Se não carregou, sair
     if((matriz1 == NULL) || (matriz2 == NULL)) {
         delete[] matriz1;
         delete[] matriz2;
         return 2;
     }
-    cout << endl;
-
+    
     //Calcula a multiplicação utilizando iteração
     int **c = multiplicaI(matriz1, matriz2, dimensao);
     

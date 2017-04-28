@@ -31,7 +31,10 @@
     */
     template <typename T>
     T **multiplicaI(T **A, T **B, int n) {
-        return A;
+        int **ret = new int*[n];
+        for(int i = 0; i < n; i++)
+            ret[i] = new int[n];
+        return ret;
     }
 
     /**
