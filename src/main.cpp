@@ -74,6 +74,8 @@ int main(int argc, char* argv[]) {
                 cout << matrizcr[i][j] << " ";
             cout << endl;
         }
+
+        //TODO - SALVAR EM ARQUIVOS
     }
 
     delete[] matriz1;
