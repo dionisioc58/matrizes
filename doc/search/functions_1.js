@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['multiplicai',['multiplicaI',['../matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d',1,'matriz.h']]],
-  ['multiplicar',['multiplicaR',['../matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74',1,'matriz.h']]]
+  ['dev',['dev',['../operacoes_8h.html#a0942cfe383d90ffa0a3808f180d48dbd',1,'dev(Stats *dados, int elementos):&#160;operacoes.cpp'],['../operacoes_8cpp.html#a0942cfe383d90ffa0a3808f180d48dbd',1,'dev(Stats *dados, int elementos):&#160;operacoes.cpp']]]
 ];
