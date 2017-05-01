@@ -26,17 +26,22 @@ CFLAGS = -Wall -pedantic -ansi -std=c++11 -I $(INC_DIR)
 # Ao final da compilacao, remove os arquivos objeto.
 all: clean matrizes doxy
 debug: CFLAGS += -g #-O0
-debug: matrizes
+debug: clean matrizes
 
 # Alvo (target) para a construcao do executavel matrizes
-# Define os arquivos main.o como dependencias
-matrizes: $(OBJ_DIR)/main.o
+# Define os arquivos operacoes.o e main.o como dependencias
+matrizes: $(OBJ_DIR)/operacoes.o $(OBJ_DIR)/main.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
 	@echo "+++ [Executavel $@ criado em $(BIN_DIR)] +++"
 	@echo "============="
+
+# Alvo (target) para a construcao do objeto operacoes.o
+# Define o arquivo operacoes.cpp e stats.h como dependencias.
+$(OBJ_DIR)/operacoes.o: $(SRC_DIR)/operacoes.cpp $(INC_DIR)/operacoes.h
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto main.o
 # Define o arquivo main.cpp como dependencias.

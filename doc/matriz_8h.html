@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,14 +115,14 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:a754e5789550bcfb586ea90f2051e0b5d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a754e5789550bcfb586ea90f2051e0b5d"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#a754e5789550bcfb586ea90f2051e0b5d">multiplicaI</a> (T **A, T **B, int n)</td></tr>
-<tr class="memdesc:a754e5789550bcfb586ea90f2051e0b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa.  <a href="#a754e5789550bcfb586ea90f2051e0b5d">Mais...</a><br /></td></tr>
-<tr class="separator:a754e5789550bcfb586ea90f2051e0b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#a4ffe92faa374c4cdf326cff58aec5f74">multiplicaR</a> (T **A, T **B, int n)</td></tr>
-<tr class="memdesc:a4ffe92faa374c4cdf326cff58aec5f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva.  <a href="#a4ffe92faa374c4cdf326cff58aec5f74">Mais...</a><br /></td></tr>
-<tr class="separator:a4ffe92faa374c4cdf326cff58aec5f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd76553ac6f36b06fe70783f11a3deb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3bd76553ac6f36b06fe70783f11a3deb"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#a3bd76553ac6f36b06fe70783f11a3deb">multiplicaMatrizesI</a> (T **A, T **B, int n)</td></tr>
+<tr class="memdesc:a3bd76553ac6f36b06fe70783f11a3deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma iterativa.  <a href="#a3bd76553ac6f36b06fe70783f11a3deb">Mais...</a><br /></td></tr>
+<tr class="separator:a3bd76553ac6f36b06fe70783f11a3deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9451ff70a3340a3dfa836b1fb1717fef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9451ff70a3340a3dfa836b1fb1717fef"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#a9451ff70a3340a3dfa836b1fb1717fef">multiplicaMatrizesR</a> (T **A, T **B, int n)</td></tr>
+<tr class="memdesc:a9451ff70a3340a3dfa836b1fb1717fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que multiplica duas matrizes quadradas de dimensao n x n de forma recursiva.  <a href="#a9451ff70a3340a3dfa836b1fb1717fef">Mais...</a><br /></td></tr>
+<tr class="separator:a9451ff70a3340a3dfa836b1fb1717fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac80b3231077edc67e2b022e550b78e71"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac80b3231077edc67e2b022e550b78e71"><td class="memTemplItemLeft" align="right" valign="top">T **&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matriz_8h.html#ac80b3231077edc67e2b022e550b78e71">loadMatriz</a> (string nome, int &amp;dim=0)</td></tr>
 <tr class="memdesc:ac80b3231077edc67e2b022e550b78e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que carrega um arquivo de dados contendo uma matriz quadrada.  <a href="#ac80b3231077edc67e2b022e550b78e71">Mais...</a><br /></td></tr>
@@ -173,14 +174,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a754e5789550bcfb586ea90f2051e0b5d"></a>
+<a class="anchor" id="a3bd76553ac6f36b06fe70783f11a3deb"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T** multiplicaI </td>
+          <td class="memname">T** multiplicaMatrizesI </td>
           <td>(</td>
           <td class="paramtype">T **&#160;</td>
           <td class="paramname"><em>A</em>, </td>
@@ -218,14 +219,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a4ffe92faa374c4cdf326cff58aec5f74"></a>
+<a class="anchor" id="a9451ff70a3340a3dfa836b1fb1717fef"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T** multiplicaR </td>
+          <td class="memname">T** multiplicaMatrizesR </td>
           <td>(</td>
           <td class="paramtype">T **&#160;</td>
           <td class="paramname"><em>A</em>, </td>
@@ -266,7 +267,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 28 de Abril de 2017 20:56:48 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Segunda, 1 de Maio de 2017 17:57:55 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
