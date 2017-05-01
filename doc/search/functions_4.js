@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['matrizes',['Matrizes',['../index.html',1,'']]],
   ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['matriz_2eh',['matriz.h',['../matriz_8h.html',1,'']]],
   ['max',['max',['../operacoes_8h.html#a506e61b23dcafed529f4032da80eb0ce',1,'max(double *dados, int elementos):&#160;operacoes.cpp'],['../operacoes_8cpp.html#a506e61b23dcafed529f4032da80eb0ce',1,'max(double *dados, int elementos):&#160;operacoes.cpp']]],
   ['min',['min',['../operacoes_8h.html#afa7b1a9213ccde9ee091fcd141e1cee4',1,'min(double *dados, int elementos):&#160;operacoes.cpp'],['../operacoes_8cpp.html#afa7b1a9213ccde9ee091fcd141e1cee4',1,'min(double *dados, int elementos):&#160;operacoes.cpp']]],
   ['multiplicamatrizesi',['multiplicaMatrizesI',['../matriz_8h.html#a3bd76553ac6f36b06fe70783f11a3deb',1,'matriz.h']]],

@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/matrizes",
-            "args": ["2"],
+            "args": ["2", "4", "8", "16"],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
