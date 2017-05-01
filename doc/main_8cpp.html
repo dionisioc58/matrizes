@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -69,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -94,23 +93,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <p>Arquivo fonte para execução do projeto.  
 <a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
 <code>#include &quot;<a class="el" href="matriz_8h_source.html">matriz.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="operacoes_8h_source.html">operacoes.h</a>&quot;</code><br />
-<code>#include &quot;stats.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#src_2main_8cpp" alt=""/></div>
 <map name="src_2main_8cpp" id="src_2main_8cpp">
-<area shape="rect" id="node5" href="matriz_8h.html" title="Arquivo de cabeçalho com a definição das funções. " alt="" coords="100,80,169,107"/><area shape="rect" id="node7" href="operacoes_8h.html" title="Arquivo cabeçalho com a definição de funções para operações de estatísticas. " alt="" coords="329,80,423,107"/><area shape="rect" id="node9" href="include_2stats_8h_source.html" title="stats.h" alt="" coords="399,155,462,181"/></map>
+<area shape="rect" id="node7" href="matriz_8h.html" title="Arquivo de cabeçalho com a definição das funções. " alt="" coords="129,80,199,107"/><area shape="rect" id="node9" href="operacoes_8h.html" title="Arquivo cabeçalho com a definição de funções para operações de estatísticas. " alt="" coords="439,80,532,107"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ddf1224851353fc92bfbff6f499fa97"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char *argv[])</td></tr>
+<tr class="memitem:ae03c38f2fff1ba7f1af5fdfb8a9bfd70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae03c38f2fff1ba7f1af5fdfb8a9bfd70">gerarGnuSet</a> (string nome, string base, string titulo, double max_x, double max_y)</td></tr>
+<tr class="memdesc:ae03c38f2fff1ba7f1af5fdfb8a9bfd70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que gera um arquivo de configuração gnuplot.  <a href="#ae03c38f2fff1ba7f1af5fdfb8a9bfd70">Mais...</a><br /></td></tr>
+<tr class="separator:ae03c38f2fff1ba7f1af5fdfb8a9bfd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal do programa.  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Mais...</a><br /></td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
@@ -120,10 +123,104 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, ch
 Airton Neto (<a href="#" onclick="location.href='mai'+'lto:'+'net'+'oa'+'irt'+'on'+'@ya'+'ho'+'o.c'+'om'+'.br'; return false;">netoa<span style="display: none;">.nosp@m.</span>irto<span style="display: none;">.nosp@m.</span>n@yah<span style="display: none;">.nosp@m.</span>oo.c<span style="display: none;">.nosp@m.</span>om.br</a>) </dd></dl>
 <dl class="section since"><dt>Desde</dt><dd>28/04/2017 </dd></dl>
 <dl class="section date"><dt>Data</dt><dd>28/04/2017 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Funções</h2>
+<a class="anchor" id="ae03c38f2fff1ba7f1af5fdfb8a9bfd70"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gerarGnuSet </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>titulo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que gera um arquivo de configuração gnuplot. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nome</td><td>Nome do arquivo de imagem que será gerado posteriormente </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">base</td><td>Nome do arquivo de dados em que se baseia o gráfico </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">titulo</td><td>Título que aparecerá no gráfico </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_x</td><td>Maior valor no eixo X </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_y</td><td>Maior valor no eixo Y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>True se conseguiu gerar o arquivo </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função principal do programa. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>Quantidade de argumentos </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*argv[]</td><td>Argumentos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorno </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Segunda, 1 de Maio de 2017 17:57:55 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Segunda, 1 de Maio de 2017 20:57:44 para Multiplicação de Matrizes por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

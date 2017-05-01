@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['codigo',['codigo',['../structStats.html#a99461af3a68c28d1f17f8cc647f0df72',1,'Stats::codigo()'],['../structTaxa.html#a68ab586391d20824764e21e628a7b4c3',1,'Taxa::codigo()']]]
+  ['dev',['dev',['../operacoes_8h.html#ad6dae90f6e96ea07ec71783e3aafa9ff',1,'dev(double *dados, int elementos):&#160;operacoes.cpp'],['../operacoes_8cpp.html#ad6dae90f6e96ea07ec71783e3aafa9ff',1,'dev(double *dados, int elementos):&#160;operacoes.cpp']]]
 ];

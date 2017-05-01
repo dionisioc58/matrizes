@@ -24,6 +24,56 @@ using std::string;
 #include "matriz.h"
 #include "operacoes.h"
 
+/**
+* @brief    	Função que gera um arquivo de configuração gnuplot
+* @param[in] 	nome Nome do arquivo de imagem que será gerado posteriormente
+* @param[in] 	base Nome do arquivo de dados em que se baseia o gráfico
+* @param[in] 	titulo Título que aparecerá no gráfico
+* @param[in] 	max_x Maior valor no eixo X
+* @param[in] 	max_y Maior valor no eixo Y
+* @return    	True se conseguiu gerar o arquivo
+*/
+bool gerarGnuSet(string nome, string base, string titulo, double max_x, double max_y) {
+	ofstream saida("./results/" + nome + ".gnuplot");
+	if(!saida) return false;
+
+	saida << "reset" << endl;
+	saida << "set key on" << endl;
+	saida << "set terminal png size 1280,960 enhanced font 'Helvetica,12'" << endl;
+	saida << "set output './results/" + nome + ".png'" << endl;
+	saida << "set title '" + titulo + "'" << endl;
+	saida << "set grid" << endl;
+	saida << "set xrange[0:";
+	saida << max_x;
+	saida << "]" << endl;
+	saida << "set xtics ";
+	saida << (int)(max_x/10);
+	saida << endl;
+    saida << "set ytics ";
+    saida << (float)max_y/20;
+    saida << endl;
+	saida << "set xlabel 'Tamanho da matriz'" << endl;
+	saida << "set ylabel 'Tempo gasto (ms)'" << endl;
+	saida << "set xtic rotate by -90 scale 0" << endl;
+	saida << "set yrange[0:";
+	saida << (max_y);
+	saida << "]" << endl;
+	saida << "plot './results/" << base << "' using 1:4 title 'Tempo médio' lw 2 with lines" << endl;
+	saida.close();
+
+	//Executar o gnuplot e gerar o arquivo de imagem
+	//string comando = "gnuplot -e '' ./gnuplot/" + nome + ".gnuplot";
+	//system(comando.c_str());
+
+	return true;
+}
+
+/**
+* @brief        Função principal do programa
+* @param[in]	argc	Quantidade de argumentos
+* @param[in]    *argv[]	Argumentos
+* @return		Retorno
+*/
 int main(int argc, char* argv[]) {
     //Testa argumentos
     if(argc < 2) {
@@ -31,8 +81,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    double eI[10]; //Estatísticas para as iterações (10 é a quantidade de matrizes que serão calculadas)
-    double eR[10]; //Estatísticas para as recursões
+    double eI[20]; //Estatísticas para as iterações 
+    double eR[20]; //Estatísticas para as recursões
     
     //Criar o arquivo de estatísticas de iterações
     ofstream statsite("./results/stats-ite.dat");
@@ -109,7 +159,7 @@ int main(int argc, char* argv[]) {
             cout << "Falha ao gravar stats-ite.dat" << endl;
             return 2;
         }
-        statsite << max(eI, 20) << " " << min(eI, 20) << " " << avg(eI, 20) << " " << dev(eI, 20) << endl;
+        statsite << dimensao << "x" << dimensao << " " << max(eI, 20) << " " << min(eI, 20) << " " << avg(eI, 20) << " " << dev(eI, 20) << endl;
         statsite.close();
         
         //Calcula a multiplicação utilizando recursão 20 vezes e mede o tempo
@@ -151,7 +201,7 @@ int main(int argc, char* argv[]) {
             cout << "Falha ao gravar stats-rec.dat" << endl;
             return 2;
         }
-        statsrec << max(eR, 20) << " " << min(eR, 20) << " " << avg(eR, 20) << " " << dev(eR, 20) << endl;
+        statsrec << dimensao << "x" << dimensao << " " << max(eR, 20) << " " << min(eR, 20) << " " << avg(eR, 20) << " " << dev(eR, 20) << endl;
         statsrec.close();
 
         //Libera a memória
@@ -162,6 +212,10 @@ int main(int argc, char* argv[]) {
         delete[] matriz1;
         delete[] matriz2;
     }
+
+    //Gerar gráficos
+    gerarGnuSet("grafico-ite", "stats-ite.dat", "Multiplicação de matrizes (iteração)", dimensao, max(eI, 20));
+    gerarGnuSet("grafico-rec", "stats-rec.dat", "Multiplicação de matrizes (recursão)", dimensao, max(eR, 20));
     
     return 0;
 }   

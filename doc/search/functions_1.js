@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dev',['dev',['../operacoes_8h.html#a0942cfe383d90ffa0a3808f180d48dbd',1,'dev(Stats *dados, int elementos):&#160;operacoes.cpp'],['../operacoes_8cpp.html#a0942cfe383d90ffa0a3808f180d48dbd',1,'dev(Stats *dados, int elementos):&#160;operacoes.cpp']]]
+  ['dev',['dev',['../operacoes_8h.html#ad6dae90f6e96ea07ec71783e3aafa9ff',1,'dev(double *dados, int elementos):&#160;operacoes.cpp'],['../operacoes_8cpp.html#ad6dae90f6e96ea07ec71783e3aafa9ff',1,'dev(double *dados, int elementos):&#160;operacoes.cpp']]]
 ];
